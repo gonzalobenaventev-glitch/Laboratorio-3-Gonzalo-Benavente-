@@ -18,3 +18,15 @@ Tue Apr 14 02:32:33 PM UTC 2026:
  tests:  1|6
 total_score: 5/60
 a60bf7c
+Tue Apr 14 02:47:41 PM UTC 2026: 
+ hashmap.c | 24 +++++++++++++++++++++++-
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:80:27: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+   80 |     long start = hash(key,mapa->capacity);
+      |                           ^~~~
+      |                           map
+hashmap.c:80:27: note: each undeclared identifier is reported only once for each function it appears in
+353866e
