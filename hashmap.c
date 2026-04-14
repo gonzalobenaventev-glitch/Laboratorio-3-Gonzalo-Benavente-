@@ -82,8 +82,8 @@ void insertMap(HashMap * map, char * key, void * value)
     long i = start;
 
     do {
-        if (map->bucket[i] == NULL || map->bucket[i]->key == NULL) {
-            map->bucket[i] = createPair(key,value);
+        if (map->buckets[i] == NULL || map->buckets[i]->key == NULL) {
+            map->buckets[i] = createPair(key,value);
 
             map->current = i;
 
@@ -92,7 +92,7 @@ void insertMap(HashMap * map, char * key, void * value)
             return;
         }
 
-        if (is_equal(map->bucket->key, key)) {
+        if (is_equal(map->buckets->key, key)) {
             return;
         }
         i = (i+1) % map->capacity;

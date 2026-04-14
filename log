@@ -53,3 +53,14 @@ hashmap.c:95:27: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
       |                           ^~~~~~
       |                           buckets
 9923b6d
+Tue Apr 14 02:48:43 PM UTC 2026: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:95:34: error: ‘map->buckets’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+   95 |         if (is_equal(map->buckets->key, key)) {
+      |                                  ^~
+      |                      (*          )
+27d737d
