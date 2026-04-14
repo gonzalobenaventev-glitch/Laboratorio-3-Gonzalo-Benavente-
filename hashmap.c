@@ -77,25 +77,25 @@ HashMap * createMap(long capacity)
 
 void insertMap(HashMap * map, char * key, void * value) 
 {
-    long start = hash(key,mapa->capacity);
+    long start = hash(key,map->capacity);
 
     long i = start;
 
     do {
-        if (mapa->bucket[i] == NULL || mapa->bucket[i]->key == NULL) {
-            mapa->bucket[i] = createPair(key,value);
+        if (map->bucket[i] == NULL || map->bucket[i]->key == NULL) {
+            map->bucket[i] = createPair(key,value);
 
-            mapa->current = i;
+            map->current = i;
 
-            mapa->size++;
+            map->size++;
 
             return;
         }
 
-        if (is_equal(mapa->bucket->key, key)) {
+        if (is_equal(map->bucket->key, key)) {
             return;
         }
-        i = (i+1) % mapa->capacity;
+        i = (i+1) % map->capacity;
 
     }while (i != start);
     

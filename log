@@ -30,3 +30,26 @@ hashmap.c:80:27: error: ‘mapa’ undeclared (first use in this function); did 
       |                           map
 hashmap.c:80:27: note: each undeclared identifier is reported only once for each function it appears in
 353866e
+Tue Apr 14 02:48:18 PM UTC 2026: 
+ hashmap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:85:18: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   85 |         if (map->bucket[i] == NULL || map->bucket[i]->key == NULL) {
+      |                  ^~~~~~
+      |                  buckets
+hashmap.c:85:44: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   85 |         if (map->bucket[i] == NULL || map->bucket[i]->key == NULL) {
+      |                                            ^~~~~~
+      |                                            buckets
+hashmap.c:86:18: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   86 |             map->bucket[i] = createPair(key,value);
+      |                  ^~~~~~
+      |                  buckets
+hashmap.c:95:27: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   95 |         if (is_equal(map->bucket->key, key)) {
+      |                           ^~~~~~
+      |                           buckets
+9923b6d
