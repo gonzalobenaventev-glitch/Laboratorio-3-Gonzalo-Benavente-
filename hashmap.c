@@ -92,7 +92,7 @@ void insertMap(HashMap * map, char * key, void * value)
             return;
         }
 
-        if (is_equal(map->buckets->key, key)) {
+        if (is_equal(map->buckets[i]->key, key)) {
             return;
         }
         i = (i+1) % map->capacity;

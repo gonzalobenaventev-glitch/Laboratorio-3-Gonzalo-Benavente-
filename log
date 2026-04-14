@@ -64,3 +64,9 @@ hashmap.c:95:34: error: ‘map->buckets’ is a pointer to pointer; did you mean
       |                                  ^~
       |                      (*          )
 27d737d
+Tue Apr 14 02:49:10 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 20/60
+09fa4de
