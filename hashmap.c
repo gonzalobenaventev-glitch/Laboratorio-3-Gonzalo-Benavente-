@@ -110,18 +110,18 @@ void insertMap(HashMap * map, char * key, void * value)
 
 Pair * searchMap(HashMap * map,  char * key) 
 {   
-    long map[current] = hash(key);
+    long map->current = hash(key);
 
-    if (map[current] == NULL)
+    if (map->current == NULL)
     {
         return NULL;
     }
 
     else
     {
-        if (map[current]->key == key)
+        if (map->current->key == key)
         {
-            Pair** parBuscado = createPair(key, map[current]);
+            Pair** parBuscado = createPair(key, map->current);
         }
 
         else
