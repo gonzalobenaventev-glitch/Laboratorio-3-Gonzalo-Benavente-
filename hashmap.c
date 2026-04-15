@@ -127,11 +127,14 @@ Pair * searchMap(HashMap * map,  char * key)
         }
         else
         {
-            long modulo = (posicion + 1) % map->capacity;
-                
-            while ()
+            while (map->buckets[map->current] != NULL)
+                {
+                    posicion++;
+                }
+
+            if (map->buckets[map->current] == NULL)
             {
-                posicion++;
+                return NULL;
             }
         }
     }
