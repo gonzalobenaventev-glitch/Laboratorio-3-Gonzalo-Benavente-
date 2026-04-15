@@ -412,3 +412,20 @@ hashmap.c:138:1: error: control reaches end of non-void function [-Werror=return
       | ^
 cc1: all warnings being treated as errors
 6d144d3
+Wed Apr 15 06:31:24 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:132:47: error: comparison of distinct pointer types lacks a cast [-Werror=compare-distinct-pointer-types]
+  132 |             while (map->buckets[map->current] != key)
+      |                                               ^~
+hashmap.c:130:18: error: unused variable ‘modulo’ [-Werror=unused-variable]
+  130 |             long modulo = (posicion + 1) % map->capacity;
+      |                  ^~~~~~
+hashmap.c:138:1: error: control reaches end of non-void function [-Werror=return-type]
+  138 | }
+      | ^
+cc1: all warnings being treated as errors
+b0b4753
