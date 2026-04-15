@@ -121,10 +121,10 @@ Pair * searchMap(HashMap * map,  char * key)
     {
         if (map->buckets[posicion]->key != NULL)
         {
-            map->current = posicion;
             
-            if (is_equal(map->buckets[map->current]->key, key) == 1)
+            if (is_equal(map->buckets[posicion]->key, key) == 1)
             {
+                map->current = posicion;
                 return map->buckets[map->current];
             }
             else
@@ -137,6 +137,8 @@ Pair * searchMap(HashMap * map,  char * key)
             posicion = (posicion + 1) % map->capacity;
         }
     }
+
+    return NULL;
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 
