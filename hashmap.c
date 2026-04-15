@@ -127,15 +127,10 @@ Pair * searchMap(HashMap * map,  char * key)
         }
         else
         {
-            while (map->buckets[map->current] != NULL)
+            while (map->buckets[map->current] == NULL)
                 {
-                    posicion++;
+                    return NULL;
                 }
-
-            if (map->buckets[map->current] == NULL)
-            {
-                return NULL;
-            }
         }
     }
 }
