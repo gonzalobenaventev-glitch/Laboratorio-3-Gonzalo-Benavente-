@@ -127,8 +127,9 @@ Pair * searchMap(HashMap * map,  char * key)
         }
         else
         {   
-            while (map->buckets[map->current]->key != key)
+            while (map->buckets[map->current] != NULL)
                 {
+                    if ()
                     posicion++;
                 }
         }
