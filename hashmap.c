@@ -112,7 +112,7 @@ Pair * searchMap(HashMap * map,  char * key)
 {   
     long posicion = hash(key, map->capacity);
 
-    if (posicion[map] == NULL)
+    if (map[posicion] == NULL)
     {
         return NULL;
     }

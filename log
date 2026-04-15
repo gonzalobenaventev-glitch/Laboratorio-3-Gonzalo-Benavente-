@@ -215,3 +215,19 @@ hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return
       | ^
 cc1: all warnings being treated as errors
 e73fdff
+Wed Apr 15 05:37:56 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:115:23: error: invalid operands to binary == (have ‘HashMap’ {aka ‘struct HashMap’} and ‘void *’)
+  115 |     if (map[posicion] == NULL)
+      |         ~~~~~~~~~~~~~ ^~
+      |            |
+      |            HashMap {aka struct HashMap}
+hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+1024516
