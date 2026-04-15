@@ -199,3 +199,19 @@ Wed Apr 15 05:27:37 PM UTC 2026:
  tests:  5|4
 total_score: 20/60
 30ad77d
+Wed Apr 15 05:37:30 PM UTC 2026: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:115:23: error: invalid operands to binary == (have ‘HashMap’ {aka ‘struct HashMap’} and ‘void *’)
+  115 |     if (posicion[map] == NULL)
+      |         ~~~~~~~~~~~~~ ^~
+      |                 |
+      |                 HashMap {aka struct HashMap}
+hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+e73fdff
