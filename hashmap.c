@@ -119,17 +119,23 @@ Pair * searchMap(HashMap * map,  char * key)
 
     while (map->buckets[posicion] != NULL)
     {
-        map->current = posicion;
-            
-        if (map->buckets[map->current]->key == key)
+        if (map->buckets[posicion]->key == NULL)
         {
-            return map->buckets[map->current];
+            map->current = posicion;
+            
+            if (map->buckets[map->current]->key == key)
+            {
+                return map->buckets[map->current];
+            }
+            else
+            {   
+               posicion++;
+            }
         }
         else
-        {   
+        {
             posicion++;
         }
-    }
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 
