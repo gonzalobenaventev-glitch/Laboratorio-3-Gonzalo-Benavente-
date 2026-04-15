@@ -110,27 +110,7 @@ void insertMap(HashMap * map, char * key, void * value)
 
 Pair * searchMap(HashMap * map,  char * key) 
 {   
-    long posicion= hash(key, map->capacity);
-
-    if (map[posicion] == NULL)
-    {
-        return NULL;
-    }
-
-   /* else
-    {
-        if (map[posicion]key == key)
-        {
-            Pair** parBuscado = createPair(key, map[posicion]);
-
-            return parBuscado;
-        }
-
-        else
-        {
-            
-        }
-    }*/
+    return NULL;
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 
