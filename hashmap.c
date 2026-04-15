@@ -108,10 +108,27 @@ void insertMap(HashMap * map, char * key, void * value)
 //   c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
-Pair * searchMap(HashMap * map,  char * key) {   
+Pair * searchMap(HashMap * map,  char * key) 
+{   
+    long map[current] = hash(key);
 
+    if (map[current] == NULL)
+    {
+        return NULL;
+    }
 
-    return NULL;
+    else
+    {
+        if (map[current]->key == key)
+        {
+            Pair** parBuscado = createPair(key, map[current]);
+        }
+
+        else
+        {
+            map->current = map->current+1;
+        }
+    }
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 
