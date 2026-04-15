@@ -242,3 +242,29 @@ hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return
       | ^
 cc1: all warnings being treated as errors
 1f26805
+Wed Apr 15 05:52:46 PM UTC 2026: 
+ hashmap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:122:26: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+  122 |             map->current = map->buckets[posicion];
+      |                          ^
+hashmap.c:124:29: error: invalid type argument of ‘->’ (have ‘long int’)
+  124 |             if (map->current->key == key)
+      |                             ^~
+hashmap.c:126:27: error: returning ‘long int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 return map->current;
+      |                        ~~~^~~~~~~~~
+hashmap.c:131:37: error: comparison between pointer and integer [-Werror]
+  131 |                 while (map->current != NULL)
+      |                                     ^~
+hashmap.c:134:38: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+  134 |                         map->current = map->buckets[posicion];
+      |                                      ^
+hashmap.c:138:1: error: control reaches end of non-void function [-Werror=return-type]
+  138 | }
+      | ^
+cc1: all warnings being treated as errors
+f679a61
