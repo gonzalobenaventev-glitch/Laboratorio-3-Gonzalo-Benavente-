@@ -142,3 +142,38 @@ hashmap.c:132:1: error: control reaches end of non-void function [-Werror=return
       | ^
 cc1: all warnings being treated as errors
 8c03e18
+Wed Apr 15 05:18:51 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:113:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+  113 |     long map->current = hash(key, map->capacity);
+      |             ^~
+hashmap.c:113:13: error: expected expression before ‘->’ token
+hashmap.c:115:22: error: comparison between pointer and integer [-Werror]
+  115 |     if (map->current == NULL)
+      |                      ^~
+hashmap.c:122:25: error: invalid type argument of ‘->’ (have ‘long int’)
+  122 |         if (map->current->key == key)
+      |                         ^~
+hashmap.c:124:52: error: passing argument 2 of ‘createPair’ makes pointer from integer without a cast [-Wint-conversion]
+  124 |             Pair** parBuscado = createPair(key, map->current);
+      |                                                 ~~~^~~~~~~~~
+      |                                                    |
+      |                                                    long int
+hashmap.c:21:40: note: expected ‘void *’ but argument is of type ‘long int’
+   21 | Pair * createPair( char * key,  void * value) {
+      |                                 ~~~~~~~^~~~~
+hashmap.c:124:33: error: initialization of ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+  124 |             Pair** parBuscado = createPair(key, map->current);
+      |                                 ^~~~~~~~~~
+hashmap.c:124:20: error: unused variable ‘parBuscado’ [-Werror=unused-variable]
+  124 |             Pair** parBuscado = createPair(key, map->current);
+      |                    ^~~~~~~~~~
+hashmap.c:132:1: error: control reaches end of non-void function [-Werror=return-type]
+  132 | }
+      | ^
+cc1: all warnings being treated as errors
+86c060d
