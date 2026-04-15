@@ -119,7 +119,7 @@ Pair * searchMap(HashMap * map,  char * key)
 
     while (map->buckets[posicion] != NULL)
     {
-        map->buckets[map->current] = posicion;
+        map->current = posicion;
             
         if (map->buckets[map->current]->key == key)
         {
