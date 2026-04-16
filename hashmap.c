@@ -230,9 +230,9 @@ void enlarge(HashMap * map)
 {
     Pair** auxiliar = map->buckets;
 
+    map->capacity *= 2;
     
     enlarge_called = 1; //no borrar (testing purposes)
-
 
 }
 
