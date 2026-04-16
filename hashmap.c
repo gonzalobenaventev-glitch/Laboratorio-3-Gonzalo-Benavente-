@@ -228,7 +228,7 @@ Pair * nextMap(HashMap * map)
 
 void enlarge(HashMap * map) 
 {
-    Pair** auxiliar = 
+    //Pair** auxiliar = (Pair**)calloc(sizeof(Pair*));
     enlarge_called = 1; //no borrar (testing purposes)
 
 
