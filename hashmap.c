@@ -199,20 +199,15 @@ Pair * firstMap(HashMap * map)
 
 Pair * nextMap(HashMap * map) 
 {
-    while (map->buckets != NULL)
+    for (int i = map->current + 1; i < map->capacity; i++)
         {
-            for (int i = map->current + 1; i < map->size; i++)
+            if (map->buckets[i] != NULL)
                 {
                     if (map->buckets[i]->key != NULL)
                     {
-                        map->buckets[map->current] = map->buckets[i];
+                        map->current = i;
 
                         return map->buckets[map->current];
-                    }
-
-                    else
-                    {
-                        i++;
                     }
                 }
         }
