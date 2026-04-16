@@ -158,7 +158,7 @@ void eraseMap(HashMap * map,  char * key)
                 if (is_equal(map->buckets[posicion]->key, key) == 1)
                 {
                     map->buckets[posicion]->key = NULL;
-                    size = size - 1;
+                    map->size = map->size - 1;
                 }
 
                 else
@@ -166,7 +166,7 @@ void eraseMap(HashMap * map,  char * key)
                     posicion++;
                 }
             }
-            else;
+            else
             {
                 posicion++;
             }
