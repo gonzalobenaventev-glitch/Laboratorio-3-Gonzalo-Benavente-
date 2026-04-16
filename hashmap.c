@@ -228,6 +228,7 @@ Pair * nextMap(HashMap * map)
 
 void enlarge(HashMap * map) 
 {
+    //Pair** auxiliar = 
     enlarge_called = 1; //no borrar (testing purposes)
 
 
