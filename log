@@ -656,3 +656,13 @@ Thu Apr 16 01:44:51 PM UTC 2026:
  tests:  12|2
 total_score: 40/60
 a79b11b
+Thu Apr 16 01:45:27 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:189:30: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+  189 |                 map->current = map->buckets[i];
+      |                              ^
+771451f
