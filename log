@@ -732,3 +732,18 @@ Thu Apr 16 08:18:02 PM UTC 2026:
  tests:  16|1
 total_score: 50/60
 062f125
+Thu Apr 16 08:46:54 PM UTC 2026: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:245:44: error: ‘auxiliar’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+  245 |                     insertMap(map, auxiliar->key, auxiliar->value);
+      |                                            ^~
+      |                                    (*      )
+hashmap.c:245:59: error: ‘auxiliar’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+  245 |                     insertMap(map, auxiliar->key, auxiliar->value);
+      |                                                           ^~
+      |                                                   (*      )
+8a8e63e
