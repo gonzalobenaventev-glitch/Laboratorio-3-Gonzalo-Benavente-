@@ -594,3 +594,21 @@ Thu Apr 16 01:10:40 PM UTC 2026:
  tests:  11|2
 total_score: 40/60
 6093d6e
+Thu Apr 16 01:26:55 PM UTC 2026: 
+ hashmap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:185:42: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  185 |             for (int i = 0; i < map->size, i++)
+      |                                          ^
+hashmap.c:185:47: error: expected ‘;’ before ‘)’ token
+  185 |             for (int i = 0; i < map->size, i++)
+      |                                               ^
+      |                                               ;
+hashmap.c:189:35: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Wincompatible-pointer-types]
+  189 |                         return map->buckets;
+      |                                ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+bf8b101
