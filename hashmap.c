@@ -95,7 +95,7 @@ void insertMap(HashMap * map, char * key, void * value)
         if (is_equal(map->buckets[i]->key, key)) {
             return;
         }
-        i = (i+1) % map->capacity;
+        i = (i+1) % map->capacity; //el modulo luego permite que en caso de llegar al último elemento y aún no encuentro el elemento o clave deseada, poder evaluar desde el inicio para que así el siguiente no sea una casilla inexistente.
 
     }while (i != start);
     
@@ -228,7 +228,7 @@ Pair * nextMap(HashMap * map)
 
 void enlarge(HashMap * map) 
 {
-    //Pair** auxiliar = 
+    Pair** auxiliar = 
     enlarge_called = 1; //no borrar (testing purposes)
 
 
