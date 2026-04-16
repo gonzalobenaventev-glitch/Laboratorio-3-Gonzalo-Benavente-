@@ -782,3 +782,9 @@ hashmap.c:245:54: error: ‘HashMap’ {aka ‘struct HashMap’} has no member 
   245 |                     insertMap(map, auxiliar->key, map->value);
       |                                                      ^~
 f25f1d2
+Thu Apr 16 08:50:23 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 60/60
+b75beb5
