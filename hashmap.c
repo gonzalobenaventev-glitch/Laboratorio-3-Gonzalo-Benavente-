@@ -232,7 +232,11 @@ void enlarge(HashMap * map)
 
     map->capacity *= 2;
 
-    map->buckets = (Pair**)calloc(sizeof(Pair*));
+    map->buckets = (Pair**)calloc(map->capacity, sizeof(Pair*));
+
+    map->size = 0;
+
+    
     
     enlarge_called = 1; //no borrar (testing purposes)
 
