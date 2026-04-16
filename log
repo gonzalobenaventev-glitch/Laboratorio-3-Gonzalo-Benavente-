@@ -666,3 +666,13 @@ hashmap.c:189:30: error: assignment to ‘long int’ from ‘Pair *’ makes in
   189 |                 map->current = map->buckets[i];
       |                              ^
 771451f
+Thu Apr 16 01:48:00 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:189:29: error: subscripted value is neither array nor pointer nor vector
+  189 |                 map->current[map->current] = i;
+      |                             ^
+0786ecb
