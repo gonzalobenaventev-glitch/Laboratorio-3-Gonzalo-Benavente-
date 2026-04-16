@@ -231,6 +231,8 @@ void enlarge(HashMap * map)
     Pair** auxiliar = map->buckets;
 
     map->capacity *= 2;
+
+    map->buckets = (Pair**)calloc(sizeof(Pair*));
     
     enlarge_called = 1; //no borrar (testing purposes)
 
