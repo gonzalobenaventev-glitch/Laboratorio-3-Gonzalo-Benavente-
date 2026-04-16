@@ -236,7 +236,16 @@ void enlarge(HashMap * map)
 
     map->size = 0;
 
-    
+    for (int i = 0; i < (map->capacity / 2); i++)
+        {
+            if (auxiliar[i] != NULL)
+            {
+                if (auxiliar[i]->key != NULL)
+                {
+                    insertMap(map->buckets[i], auxiliar[i]);
+                }
+            }
+        }
     
     enlarge_called = 1; //no borrar (testing purposes)
 
