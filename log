@@ -768,3 +768,17 @@ hashmap.c:78:6: note: declared here
    78 | void insertMap(HashMap * map, char * key, void * value)
       |      ^~~~~~~~~
 e8ebc74
+Thu Apr 16 08:47:50 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:245:44: error: ‘auxiliar’ is a pointer to pointer; did you mean to dereference it before applying ‘->’ to it?
+  245 |                     insertMap(map, auxiliar->key, map->value);
+      |                                            ^~
+      |                                    (*      )
+hashmap.c:245:54: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘value’
+  245 |                     insertMap(map, auxiliar->key, map->value);
+      |                                                      ^~
+f25f1d2

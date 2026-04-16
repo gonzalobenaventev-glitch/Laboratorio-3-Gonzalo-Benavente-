@@ -242,7 +242,7 @@ void enlarge(HashMap * map)
             {
                 if (auxiliar[i]->key != NULL)
                 {
-                    insertMap(map, auxiliar);
+                    insertMap(map, auxiliar->key, map->value);
                 }
             }
         }
