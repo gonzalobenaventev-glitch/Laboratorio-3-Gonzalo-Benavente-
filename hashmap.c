@@ -228,7 +228,9 @@ Pair * nextMap(HashMap * map)
 
 void enlarge(HashMap * map) 
 {
-    Pair** auxiliar = (Pair**)calloc(sizeof(Pair*));
+    Pair** auxiliar = map->buckets;
+
+    
     enlarge_called = 1; //no borrar (testing purposes)
 
 
