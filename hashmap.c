@@ -203,7 +203,7 @@ Pair * nextMap(HashMap * map)
 {
     while (map->buckets != NULL)
         {
-            for (int i = map->current; i < map->size; i++)
+            for (int i = map->current + 1; i < map->size; i++)
                 {
                     if (map->buckets[i]->key != NULL)
                     {
