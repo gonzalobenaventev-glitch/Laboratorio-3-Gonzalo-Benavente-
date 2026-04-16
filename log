@@ -747,3 +747,24 @@ hashmap.c:245:59: error: ‘auxiliar’ is a pointer to pointer; did you mean to
       |                                                           ^~
       |                                                   (*      )
 8a8e63e
+Thu Apr 16 08:47:29 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:245:36: error: passing argument 2 of ‘insertMap’ from incompatible pointer type [-Wincompatible-pointer-types]
+  245 |                     insertMap(map, auxiliar);
+      |                                    ^~~~~~~~
+      |                                    |
+      |                                    Pair **
+hashmap.c:78:38: note: expected ‘char *’ but argument is of type ‘Pair **’
+   78 | void insertMap(HashMap * map, char * key, void * value)
+      |                               ~~~~~~~^~~
+hashmap.c:245:21: error: too few arguments to function ‘insertMap’
+  245 |                     insertMap(map, auxiliar);
+      |                     ^~~~~~~~~
+hashmap.c:78:6: note: declared here
+   78 | void insertMap(HashMap * map, char * key, void * value)
+      |      ^~~~~~~~~
+e8ebc74
