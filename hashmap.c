@@ -180,21 +180,19 @@ void eraseMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) 
 {
-    while (map->buckets != NULL)
+    for (int i = 0; i < map->capacity; i++)
+    {
+        if (map->buckets[i] != NULL)
         {
-            for (int i = 0; i < map->size; i++)
-                {
-                    if (map->buckets[i]->key != NULL)
-                    {
-                        return map->buckets[i];
-                    }
+            if (map->buckets[i]->key != NULL)
+            {
+                map->buckets[map->current] = map->buckets[i];
 
-                    else
-                    {
-                        i++;
-                    }
-                }
+                return map->buckets[map->current];
+            }
         }
+
+    }
 
     return NULL;
 }
