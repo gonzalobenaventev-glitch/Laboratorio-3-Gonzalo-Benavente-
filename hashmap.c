@@ -201,7 +201,23 @@ Pair * firstMap(HashMap * map)
 
 Pair * nextMap(HashMap * map) 
 {
+    while (map->buckets != NULL)
+        {
+            for (int i = map->buckets[map->current]; i < map->size; i++)
+                {
+                    if (map->buckets[i]->key != NULL)
+                    {
+                        map->buckets[map->current] = map->buckets[i];
 
+                        return map->buckets[map->current];
+                    }
+
+                    else
+                    {
+                        i++;
+                    }
+                }
+        }
     return NULL;
 }
 

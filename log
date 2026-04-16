@@ -628,3 +628,13 @@ Thu Apr 16 01:27:52 PM UTC 2026:
  tests:  12|2
 total_score: 40/60
 5f8c153
+Thu Apr 16 01:36:05 PM UTC 2026: 
+ hashmap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:206:26: error: initialization of ‘int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+  206 |             for (int i = map->buckets[map->current]; i < map->size; i++)
+      |                          ^~~
+2602f26
