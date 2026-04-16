@@ -182,7 +182,7 @@ Pair * firstMap(HashMap * map)
 {
     while (map->buckets != NULL)
         {
-            for (int i = 0; i < map->size, i++)
+            for (int i = 0; i < map->size; i++)
                 {
                     if (map->buckets[i]->key != NULL)
                     {
